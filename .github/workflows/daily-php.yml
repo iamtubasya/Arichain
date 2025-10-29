@@ -1,0 +1,20 @@
+name: Run PHP daily at 01:00 UTC
+
+on:
+  schedule:
+    - cron: '0 1 * * *'    # setiap hari jam 01:00 UTC
+
+jobs:
+  run-php:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Run script.php
+        run: php script.php
