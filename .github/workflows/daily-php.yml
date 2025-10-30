@@ -16,5 +16,5 @@ jobs:
         with:
           php-version: '8.3'
 
-      - name: Run script.php
-        run: php script.php
+      - name: Run bot.php
+        run: php bot.php
