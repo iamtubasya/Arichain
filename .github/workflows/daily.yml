@@ -3,6 +3,7 @@ name: Run PHP daily at 01:00 UTC
 on:
   schedule:
     - cron: '0 1 * * *'    # setiap hari jam 01:00 UTC
+  workflow_dispatch:
 
 jobs:
   run-php:
